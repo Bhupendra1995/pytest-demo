@@ -1,0 +1,49 @@
+for cmd run we use
+pytest
+For detailed run use pytest -v -s
+we can also use pytest -vs
+we can find out the all details using pytest -h
+we have this whole process of execution
+pytest [options] [file_or_dir] [file_or_dir] [...]
+here options are these v s k(keywords)
+eg : pytest LearnPyTest\test_AddData -vsk Log
+so it will execute all the files contains Log under test_AddData.py
+
+Markers :
+syntax : -m MARKEXPR
+and we need to add the @pytest.mark.MarkerName to the test case and then need to run the cmd
+So there are custom and built in Markers as well
+
+
+
+In this pytest tutorial, we covered the following areas −
+
+Installing pytest..
+Identifying test files and test functions.
+Executing all test files using pytest –v.
+Executing specific file usimng pytest <filename> -v.
+Execute tests by substring matching pytest -k <substring> -v.
+Execute tests based on markers pytest -m <marker_name> -v.
+Creating fixtures using @pytest.fixture.
+conftest.py allows accessing fixtures from multiple files.
+Parametrizing tests using @pytest.mark.parametrize.
+Xfailing tests using @pytest.mark.xfail.
+Skipping tests using @pytest.mark.skip.
+Stop test execution on n failures using pytest --maxfail = <num>.
+Running tests in parallel using pytest -n <num>.
+Generating results xml using pytest -v --junitxml = "result.xml".
+
+
+
+Fixture scopes: 
+Fixtures are created when first requested by a test, and are destroyed based on their scope:
+
+function: the default scope, the fixture is destroyed at the end of the test.
+
+class: the fixture is destroyed during teardown of the last test in the class.
+
+module: the fixture is destroyed during teardown of the last test in the module.
+
+package: the fixture is destroyed during teardown of the last test in the package.
+
+session: the fixture is destroyed at the end of the test session.
